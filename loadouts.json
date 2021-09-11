@@ -1,0 +1,130 @@
+{
+   "classes": [
+      {
+         "name": "Scout",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+
+            ]
+         }
+      },
+      {
+         "name": "Soldier",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Pyro",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Demoman",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Heavy",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Engineer",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Medic",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Sniper",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      },
+      {
+         "name": "Spy",
+         "weapons": {
+            "primary": [
+
+            ],
+            "secondary": [
+
+            ],
+            "melee": [
+               
+            ]
+         }
+      }
+   ]
+}
