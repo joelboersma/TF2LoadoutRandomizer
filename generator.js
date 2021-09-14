@@ -28,23 +28,43 @@ function consoleLogAll() {
    }
 }
 
+// Generate loadout object
+function generateLoadout(classIndex) {
+   let loadout = {
+      name: data.classes[classIndex].name,
+      weapons: {}
+   }
+
+   for (const slot in data.classes[classIndex].weapons) {
+      const weaponChoices = data.classes[classIndex].weapons[slot];
+      const weaponSelection = weaponChoices[Math.floor(Math.random() * (weaponChoices.length - 1))];
+      loadout.weapons[slot] = weaponSelection;
+   }
+
+   return loadout;
+}
+
 // Get loadout data
 getLoadouts((response) => {
    data = JSON.parse(response);
-   consoleLogAll();
+   // consoleLogAll();
 });
 
 // Listen for keypress
 document.addEventListener('keydown', (ev) => {
-   let tf2ClassIndex;
+   let classIndex;
    if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
       // Pick random class
-      tf2ClassIndex = Math.floor(Math.random() * data.classes.length);
+      classIndex = Math.floor(Math.random() * data.classes.length);
    }
    else if (ev.key >= '1' && ev.key <= '9') {
       // If user pushes a number key, pick class corresponding to key pressed
-      tf2ClassIndex = ev.key - '1';
+      classIndex = ev.key - '1';
    }
    else return;
-   console.log(`Your class: ${data.classes[tf2ClassIndex].name} (${tf2ClassIndex + 1})`);
+
+   console.log(`Your class: ${data.classes[classIndex].name} (${classIndex + 1})`);
+
+   const loadout = generateLoadout(classIndex);
+   console.log(loadout);
 });
