@@ -33,3 +33,16 @@ getLoadouts((response) => {
    consoleLogAll();
 });
 
+document.addEventListener('keydown', (ev) => {
+   let tf2ClassIndex;
+   if (ev.key == '0') {
+      tf2ClassIndex = Math.floor(Math.random() * data.classes.length);
+   }
+   else if (ev.key >= '1' && ev.key <= '9') {
+      tf2ClassIndex = ev.key - '1';
+   }
+   else {
+      return;
+   }
+   console.log(`Your class: ${data.classes[tf2ClassIndex].name} (${tf2ClassIndex + 1})`)
+});
