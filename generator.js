@@ -1,5 +1,8 @@
 'use strict';
 
+const resultsDiv = document.getElementById('results');
+const classHeader = document.querySelector('#results h2');
+const weaponList = document.querySelector('#results ul');
 let data;
 
 // Get data from loadouts.json
@@ -31,7 +34,7 @@ function consoleLogAll() {
 // Generate loadout object
 function generateLoadout(classIndex) {
    let loadout = {
-      name: data.classes[classIndex].name,
+      className: data.classes[classIndex].name,
       weapons: {}
    }
 
@@ -42,6 +45,16 @@ function generateLoadout(classIndex) {
    }
 
    return loadout;
+}
+
+// Display the loadout given a loadout object
+function displayLoadout(loadout) {
+   classHeader.innerHTML = `Class: ${loadout.className}`;
+   weaponList.innerHTML = '';
+   for (const slot in loadout.weapons) {
+      weaponList.innerHTML += `<li>${slot}: ${loadout.weapons[slot]}</li>`
+   }
+   resultsDiv.hidden = false;
 }
 
 // Get loadout data
@@ -66,5 +79,5 @@ document.addEventListener('keydown', (ev) => {
    console.log(`Your class: ${data.classes[classIndex].name} (${classIndex + 1})`);
 
    const loadout = generateLoadout(classIndex);
-   console.log(loadout);
+   displayLoadout(loadout);
 });
