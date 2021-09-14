@@ -35,7 +35,7 @@ getLoadouts((response) => {
 
 document.addEventListener('keydown', (ev) => {
    let tf2ClassIndex;
-   if (ev.key == '0') {
+   if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
       tf2ClassIndex = Math.floor(Math.random() * data.classes.length);
    }
    else if (ev.key >= '1' && ev.key <= '9') {
