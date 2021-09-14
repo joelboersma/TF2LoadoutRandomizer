@@ -76,8 +76,6 @@ document.addEventListener('keydown', (ev) => {
    }
    else return;
 
-   console.log(`Your class: ${data.classes[classIndex].name} (${classIndex + 1})`);
-
    const loadout = generateLoadout(classIndex);
    displayLoadout(loadout);
 });
