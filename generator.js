@@ -1,9 +1,14 @@
 'use strict';
 
+// === GLOBAL VARS ===
+const generateButton = document.getElementById('generateButton');
 const resultsDiv = document.getElementById('results');
 const classHeader = document.querySelector('#results h2');
 const weaponList = document.querySelector('#results ul');
 let data;
+
+
+// === HELPER FUNCTIONS ===
 
 // Get data from loadouts.json
 function getLoadouts(callback) {
@@ -57,10 +62,25 @@ function displayLoadout(loadout) {
    resultsDiv.hidden = false;
 }
 
+// Calculate then display loadout when button is pushed, with given class
+function loadoutAction(classIndex) {
+   const loadout = generateLoadout(classIndex);
+   displayLoadout(loadout);
+}
+
+
+// === RUN ON STARTUP ===
+
 // Get loadout data
 getLoadouts((response) => {
    data = JSON.parse(response);
    // consoleLogAll();
+});
+
+// Listen for button push
+generateButton.addEventListener('click', function() {
+   const classIndex = Math.floor(Math.random() * data.classes.length);
+   loadoutAction(classIndex);
 });
 
 // Listen for keypress
@@ -76,6 +96,5 @@ document.addEventListener('keydown', (ev) => {
    }
    else return;
 
-   const loadout = generateLoadout(classIndex);
-   displayLoadout(loadout);
+   loadoutAction(classIndex);
 });

@@ -35,6 +35,23 @@ body {
    margin: 3px;
 }
 
+#generateButton {
+   border: none;
+   padding: 15px;
+   font-size: 32px;
+   font-weight: bold;
+   border-radius: 10px;
+   background-color: #F3A957;
+}
+
+#generateButton:hover {
+   cursor: pointer;
+}
+
+#generateButton:active {
+   background-color: hsl(32, 70%, 52%);
+}
+
 #results {
    background-color: blanchedalmond;
    padding: 20px;
