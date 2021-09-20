@@ -9,73 +9,90 @@
    <script src="generator.js" defer></script>
 </head>
 <body>
-   <h1>TF2 Random Loadout Generator</h1>
-   <section id="controls">
-      <button id="generateButton">Randomize!</button>
-      <ol>
+   <header>
+      <h1>TF2 Random Loadout Generator</h1>
+   </header>
+   <main>
+      <section id="controls">
+         <button id="generateButton">Randomize!</button>
+         <ol>
+            <li>
+               <button>
+                  <div>Scout</div>
+                  <div>1</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Soldier</div>
+                  <div>2</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Pyro</div>
+                  <div>3</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Demoman</div>
+                  <div>4</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Heavy</div>
+                  <div>5</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Engineer</div>
+                  <div>6</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Medic</div>
+                  <div>7</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Sniper</div>
+                  <div>8</div>
+               </button>
+            </li>
+            <li>
+               <button>
+                  <div>Spy</div>
+                  <div>9</div>
+               </button>
+            </li>
+         </ol>
+      </section>
+      <section id="results" hidden>
+         <h2></h2>
+         <ul></ul>
+      </section>
+      <section id="keys" hidden>
+         <p>Press <kbd>SPACE</kbd> to generate a random loadout for a random class.</p>
+         <p><strong>OR</strong> press a key <kbd>1</kbd> - <kbd>9</kbd> to pick a class.</p>
+      </section>
+   </main>
+   <footer>
+      <ul>
          <li>
-            <button>
-               <div>Scout</div>
-               <div>1</div>
-            </button>
+            <a href="&#109;&#97;&#105;&#76;&#84;&#79;&#58;&#106;&#111;&#101;&#108;&#98;&#111;&#101;&#114;&#115;&#109;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Email Me</a>
          </li>
          <li>
-            <button>
-               <div>Soldier</div>
-               <div>2</div>
-            </button>
+            <a href="https://www.github.com/joelboersma">My GitHub</a>
          </li>
          <li>
-            <button>
-               <div>Pyro</div>
-               <div>3</div>
-            </button>
+            <a href="loadouts.json">JSON Loadout Data</a>
          </li>
-         <li>
-            <button>
-               <div>Demoman</div>
-               <div>4</div>
-            </button>
-         </li>
-         <li>
-            <button>
-               <div>Heavy</div>
-               <div>5</div>
-            </button>
-         </li>
-         <li>
-            <button>
-               <div>Engineer</div>
-               <div>6</div>
-            </button>
-         </li>
-         <li>
-            <button>
-               <div>Medic</div>
-               <div>7</div>
-            </button>
-         </li>
-         <li>
-            <button>
-               <div>Sniper</div>
-               <div>8</div>
-            </button>
-         </li>
-         <li>
-            <button>
-               <div>Spy</div>
-               <div>9</div>
-            </button>
-         </li>
-      </ol>
-   </section>
-   <section id="results" hidden>
-      <h2></h2>
-      <ul></ul>
-   </section>
-   <section id="keys" hidden>
-      <p>Press <kbd>SPACE</kbd> to generate a random loadout for a random class.</p>
-      <p><strong>OR</strong> press a key <kbd>1</kbd> - <kbd>9</kbd> to pick a class.</p>
-   </section>
+      </ul>
+   </footer>
 </body>
 </html>

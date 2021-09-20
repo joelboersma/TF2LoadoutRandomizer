@@ -12,7 +12,7 @@ kbd {
    margin: 2px;
    border-radius: 5px;
 
-   box-shadow: -0px 3px 0px 0px rgba(0,0,0,1);
+   box-shadow: -0px 3px 0px 0px black;
 }
 
 button:hover {
@@ -26,7 +26,13 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
-   background-color: #FFFCF7
+   min-height: 100vh;
+   margin: 0;
+   background-color: #fffcf7
+}
+
+main {
+   flex-grow: 1;
 }
 
 #controls {
@@ -45,6 +51,7 @@ body {
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   list-style-type: none;
 }
 
 #controls ol li button {
@@ -53,13 +60,13 @@ body {
    padding: 0;
    width: 90px;
    height: 60px;
-   background-color: #FFF2B3;
-   border: 2px solid #AAAAAA;
+   background-color: #fff2b3;
+   border: 2px solid #aaa;
    border-radius: 10px;
 }
 
 #controls ol li button:active {
-   background-color: hsl(50, 90%, 77%);
+   background-color: #f9e890;
 }
 
 #controls ol li button * {
@@ -74,8 +81,8 @@ body {
    padding: 15px;
    font-size: 32px;
    font-weight: bold;
-   background-color: #F3A957;
-   border: 2px solid #AAAAAA;
+   background-color: #f3a957;
+   border: 2px solid #aaa;
    border-radius: 10px;
 }
 
@@ -84,10 +91,38 @@ body {
 }
 
 #results {
-   background-color: #F9D483;
+   background-color: #f9d483;
    padding: 20px;
    border-radius: 20px;
-   border: 2px solid #AAAAAA;
+   border: 2px solid #aaa;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   background-color: #ddd;
+}
+
+footer ul {
+   display: flex;
+   justify-content: space-around;
+   list-style-type: none;
+   margin: 20px;
+   width: 100%;
+   max-width: 500px;
+}
+
+footer ul li a {
+   padding: 10px;
+   border-radius: 10px;
+   transition: background-color 0.25s;
+   text-decoration: none;
+   color: black;
+}
+
+footer ul li a:hover {
+   background-color: #bbb;
 }
 
 @media (max-width: 1100px) {
