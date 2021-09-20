@@ -1,7 +1,7 @@
 /* GLOBAL */
 
 * {
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 kbd {
@@ -31,7 +31,18 @@ body {
    background-color: #fffcf7
 }
 
+header {
+   margin: 0 10px;
+}
+
+header h1 {
+   text-align: center;
+}
+
 main {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
    flex-grow: 1;
 }
 
@@ -56,9 +67,9 @@ main {
 
 #controls ol li button {
    font-size: 16px;
-   margin: 6px 9px;
+   margin: 5px;
    padding: 0;
-   width: 90px;
+   width: 105px;
    height: 60px;
    background-color: #fff2b3;
    border: 2px solid #aaa;
@@ -95,6 +106,7 @@ main {
    padding: 20px;
    border-radius: 20px;
    border: 2px solid #aaa;
+   max-width: 350px;
 }
 
 footer {
@@ -102,6 +114,7 @@ footer {
    justify-content: center;
    width: 100%;
    background-color: #ddd;
+   margin-top: 10px;
 }
 
 footer ul {
@@ -109,6 +122,7 @@ footer ul {
    justify-content: space-around;
    list-style-type: none;
    margin: 20px;
+   padding: 0;
    width: 100%;
    max-width: 500px;
 }
@@ -131,8 +145,11 @@ footer ul li a:hover {
    }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
    #controls ol {
       grid-template-columns: repeat(3, 1fr);
+   }
+   footer ul li a {
+      font-size: 12px;
    }
 }
