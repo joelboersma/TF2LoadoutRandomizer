@@ -92,19 +92,34 @@ getLoadouts((response) => {
       });
    }
 
-   // Listen for keypress
+   // Listen for key down
    document.addEventListener('keydown', (ev) => {
+      ev.preventDefault();
       let classIndex;
       if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
          // Pick random class
          classIndex = Math.floor(Math.random() * data.classes.length);
+         generateButton.classList.add('active');
       }
       else if (ev.key >= '1' && ev.key <= '9') {
          // If user pushes a number key, pick class corresponding to key pressed
          classIndex = ev.key - '1';
+         classButtons[classIndex].classList.add('active');
       }
       else return;
 
       loadoutAction(classIndex);
+   }); 
+
+   // Listen for key up (to deactivate button)
+   document.addEventListener('keyup', (ev) => {
+      ev.preventDefault();
+      if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
+         generateButton.classList.remove('active');
+      }
+      else if (ev.key >= '1' && ev.key <= '9') {
+         const classIndex = ev.key - '1';
+         classButtons[classIndex].classList.remove('active');
+      }
    });
 });

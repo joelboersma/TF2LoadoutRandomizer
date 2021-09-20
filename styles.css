@@ -76,7 +76,7 @@ main {
    border-radius: 10px;
 }
 
-#controls ol li button:active {
+#controls ol li button:active, #controls ol li button.active {
    background-color: #f9e890;
 }
 
@@ -97,7 +97,7 @@ main {
    border-radius: 10px;
 }
 
-#generateButton:active {
+#generateButton:active, #generateButton.active {
    background-color: #e79940;
 }
 
