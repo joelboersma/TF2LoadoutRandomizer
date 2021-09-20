@@ -2,6 +2,7 @@
 
 // === GLOBAL VARS ===
 const generateButton = document.getElementById('generateButton');
+const classButtons = document.querySelectorAll('#controls ol li button');
 const resultsDiv = document.getElementById('results');
 const classHeader = document.querySelector('#results h2');
 const weaponList = document.querySelector('#results ul');
@@ -83,6 +84,13 @@ getLoadouts((response) => {
       const classIndex = Math.floor(Math.random() * data.classes.length);
       loadoutAction(classIndex);
    });
+
+   // Listen for class button push
+   for (let i = 0; i < data.classes.length; i++) {
+      classButtons[i].addEventListener('click', () => {
+         loadoutAction(i);
+      });
+   }
 
    // Listen for keypress
    document.addEventListener('keydown', (ev) => {
