@@ -75,26 +75,28 @@ function loadoutAction(classIndex) {
 getLoadouts((response) => {
    data = JSON.parse(response);
    // consoleLogAll();
-});
 
-// Listen for button push
-generateButton.addEventListener('click', function() {
-   const classIndex = Math.floor(Math.random() * data.classes.length);
-   loadoutAction(classIndex);
-});
+   // Now that we have the data, add the button/keyboard event listeners
 
-// Listen for keypress
-document.addEventListener('keydown', (ev) => {
-   let classIndex;
-   if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
-      // Pick random class
-      classIndex = Math.floor(Math.random() * data.classes.length);
-   }
-   else if (ev.key >= '1' && ev.key <= '9') {
-      // If user pushes a number key, pick class corresponding to key pressed
-      classIndex = ev.key - '1';
-   }
-   else return;
+   // Listen for randomize button push
+   generateButton.addEventListener('click', () => {
+      const classIndex = Math.floor(Math.random() * data.classes.length);
+      loadoutAction(classIndex);
+   });
 
-   loadoutAction(classIndex);
+   // Listen for keypress
+   document.addEventListener('keydown', (ev) => {
+      let classIndex;
+      if (ev.key == '0' || ev.key == ' ' || ev.key == 'Enter') {
+         // Pick random class
+         classIndex = Math.floor(Math.random() * data.classes.length);
+      }
+      else if (ev.key >= '1' && ev.key <= '9') {
+         // If user pushes a number key, pick class corresponding to key pressed
+         classIndex = ev.key - '1';
+      }
+      else return;
+
+      loadoutAction(classIndex);
+   });
 });
