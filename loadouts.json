@@ -244,7 +244,7 @@
       {
          "name": "Spy",
          "weapons": {
-            "Primary": [
+            "Secondary": [
                "Revolver",
                "Ambassador",
                "L'Etranger",
@@ -258,12 +258,12 @@
                "Big Earner",
                "Spy-cicle"
             ],
-            "Watch": [
+            "PDA 2": [
                "Invis Watch",
-               "Cloack and Dagger",
+               "Cloak and Dagger",
                "Dead Ringer"
             ],
-            "Sapper": [
+            "Building": [
                "Sapper",
                "Red-Tape Recorder"
             ]
