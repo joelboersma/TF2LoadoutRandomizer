@@ -46,7 +46,7 @@ function generateLoadout(classIndex) {
 
    for (const slot in data.classes[classIndex].weapons) {
       const weaponChoices = data.classes[classIndex].weapons[slot];
-      const weaponSelection = weaponChoices[Math.floor(Math.random() * (weaponChoices.length - 1))];
+      const weaponSelection = weaponChoices[Math.floor(Math.random() * weaponChoices.length)];
       loadout.weapons[slot] = weaponSelection;
    }
 
@@ -109,7 +109,7 @@ getLoadouts((response) => {
       else return;
 
       loadoutAction(classIndex);
-   }); 
+   });
 
    // Listen for key up (to deactivate button)
    document.addEventListener('keyup', (ev) => {
